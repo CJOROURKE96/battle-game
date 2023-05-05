@@ -45,3 +45,12 @@ while(playerHealth > 0 && enemyHealth > 0)
         }
     }
 }
+
+if(playerHealth > 0)
+{
+    Console.WriteLine("Congratulations, you have won!");
+}
+else 
+{
+    Console.WriteLine("You lose!");
+}
