@@ -12,7 +12,7 @@ while(playerHealth > 0 && enemyHealth > 0)
 {
     Console.WriteLine("-- Player Turn --");
     Console.WriteLine($"Player health: {playerHealth} Enemy Health: {enemyHealth}");
-    Console.WriteLine("Enter 'a' to attack or 'h' to heal.");
+    Console.WriteLine("Enter 'a' to attack, 'h' to heal or any other letter to attempt to run.");
 
     string choice = Console.ReadLine();
 
@@ -21,9 +21,13 @@ while(playerHealth > 0 && enemyHealth > 0)
         enemyHealth -= playerAttack;
         Console.WriteLine($"Player attacks the enemy and deals {playerAttack} damage");
     }
-    else {
+    else if(choice == "h"){
         playerHealth += healAmount;
         Console.WriteLine($"Player has healed by {healAmount} health");
+    }
+    else
+    {
+        Console.WriteLine("You can't run away!");
     }
 
     if(enemyHealth > 0)
